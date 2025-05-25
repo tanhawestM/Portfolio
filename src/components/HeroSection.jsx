@@ -12,23 +12,29 @@ export const HeroSection = () => {
             <span className="opacity-0 animate-fade-in"> Hi, I'm</span>
             <span className="text-primary opacity-0 animate-fade-in-delay-1">
               {" "}
-              Pedro
+              Thidayu
             </span>
             <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">
               {" "}
-              Machado
+              Peaungtham
             </span>
+          </h1>
+          <h1 className="text-2xl md:text-3xl font-bold tracking-tight">
+            UX/UI designer and Frontend developer
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            I create stellar web experiences with modern technologies.
-            Specializing in front-end development, I build interfaces that are
-            both beautiful and functional.
+            I create seamless digital experiences where form meets function —
+            intuitive interfaces, responsive layouts, and pixels that behave
+            just right. With Figma as my sketchbook and React + Tailwind as my
+            toolbox and others, I craft websites that look sharp and feel effortless. Dive
+            into my project and see how design thinking and frontend development
+            come together to tell one beautiful story.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
             <a href="#projects" className="cosmic-button">
-              View My Work
+              View My Project
             </a>
           </div>
         </div>

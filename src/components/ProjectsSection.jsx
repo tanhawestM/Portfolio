@@ -3,32 +3,53 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
-    image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
-    demoUrl: "#",
-    githubUrl: "#",
+    title: "OCSC International Education Expo 2024(Portal login)",
+    description:
+      "The official website for OCSC International Expo 2024, an event promoting universities for studying abroad.",
+    image: "/projects/projectOCSC.png",
+    tags: ["React", "TailwindCSS", "JavaScript"],
+    demoUrl:
+      "https://ocsc-2024-gqwgk7dk7-tanthidayu0000s-projects.vercel.app/profile",
+    githubUrl: "https://github.com/realpantagon/OCSC",
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "ACDelco Lucky Draw",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
-    image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "Web application for managing and tracking ticket entries for a promotional prize draw event.",
+    image: "/projects/projectACDelco.png",
+    tags: ["JavaScript", "React", "Material UI"],
+    demoUrl: "https://acdelco-pi.vercel.app/",
+    githubUrl: "https://github.com/tanhawestM/Acdel",
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "CPE Siren",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
+      "Web app for network monitoring and alerting, featuring a real-time dashboard and graphical data visualization.",
+    image: "/projects/projectCPESIREN.png",
+    tags: ["React", "Material UI", "TypeScript"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/CPEsiren",
+  },
+  {
+    id: 4,
+    title: "International Agricultural Forum 2024",
+    description: "User Attendance Tracking System.",
+    image: "/projects/projectIAF.png",
+    tags: ["React", "TailwindCSS", "JavaScript"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/tanhawestM/IAF2024",
+  },
+  {
+    id: 5,
+    title: "pixelParade",
+    description:
+      "Web app for displaying posters on TV screens to promote general events or broadcast emergency alerts in real time.",
+    image: "/projects/projectpixel.png",
+    tags: ["Vue.js", "TailwindCSS", "Typescript"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/CMU-Digital-Signage/frontend-cmu-ds",
   },
 ];
 
@@ -50,7 +71,7 @@ export const ProjectsSection = () => {
           {projects.map((project, key) => (
             <div
               key={key}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col"
             >
               <div className="h-48 overflow-hidden">
                 <img
@@ -60,35 +81,49 @@ export const ProjectsSection = () => {
                 />
               </div>
 
-              <div className="p-6">
+              {/* Make content area grow to push icons to bottom */}
+              <div className="p-6 flex flex-col flex-grow">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                  {project.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
+                    >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
+                <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
                 <p className="text-muted-foreground text-sm mb-4">
                   {project.description}
                 </p>
-                <div className="flex justify-between items-center">
+
+                {/* Spacer to push icons down */}
+                <div className="flex-grow" />
+
+                <div className="flex justify-between items-center mt-4">
                   <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <Github size={20} />
-                    </a>
+                    {project.demoUrl && project.demoUrl !== "#" && (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+                    )}
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      >
+                        <Github size={20} />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -100,7 +135,7 @@ export const ProjectsSection = () => {
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
-            href="https://github.com/machadop1407"
+            href="https://github.com/tanhawestM"
           >
             Check My Github <ArrowRight size={16} />
           </a>
