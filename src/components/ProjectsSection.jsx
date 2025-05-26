@@ -8,8 +8,9 @@ const projects = [
       "The official website for OCSC International Expo 2024, an event promoting universities for studying abroad.",
     image: "/projects/projectOCSC.png",
     tags: ["React", "TailwindCSS", "JavaScript"],
-    demoUrl:
-      "https://ocsc-2024-gqwgk7dk7-tanthidayu0000s-projects.vercel.app/profile",
+    demoUrl:"#",
+    // demoUrl:
+    //   "https://ocsc-2024-gqwgk7dk7-tanthidayu0000s-projects.vercel.app/profile",
     githubUrl: "https://github.com/realpantagon/OCSC",
   },
   {
@@ -63,8 +64,9 @@ export const ProjectsSection = () => {
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Here are some of my recent projects. Each project was carefully
-          crafted with attention to detail, performance, and user experience.
+          Take a look at some of my latest creations. Each one built with
+          precision, passion, and a sharp eye for performance and user
+          experience.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

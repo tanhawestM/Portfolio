@@ -26,7 +26,7 @@ export const HeroSection = () => {
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
             I create seamless digital experiences where form meets function —
             intuitive interfaces, responsive layouts, and pixels that behave
-            just right. With Figma as my sketchbook and React + Tailwind as my
+            just right. With Figma as my sketchbook and React + Tailwind CSS as my
             toolbox and others, I craft websites that look sharp and feel effortless. Dive
             into my project and see how design thinking and frontend development
             come together to tell one beautiful story.
