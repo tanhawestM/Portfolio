@@ -3,12 +3,12 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "OCSC International Education Expo 2024(Portal login)",
+    title: "OCSC International Education Expo 2024",
     description:
       "The official website for OCSC International Expo 2024, an event promoting universities for studying abroad.",
     image: "/projects/projectOCSC.png",
     tags: ["React", "TailwindCSS", "JavaScript"],
-    demoUrl:"#",
+    demoUrl: "#",
     // demoUrl:
     //   "https://ocsc-2024-gqwgk7dk7-tanthidayu0000s-projects.vercel.app/profile",
     githubUrl: "https://github.com/realpantagon/OCSC",
